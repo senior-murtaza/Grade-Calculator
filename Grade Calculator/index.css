@@ -1,0 +1,251 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1e293b;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: min(1000px, 94%);
+  margin: 40px auto;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #7c3aed;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.page-header h1 {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+.page-header > p:last-child {
+  color: #64748b;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.stat-card,
+.panel {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px #00000008;
+}
+
+.stat-card p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.stat-card h2 {
+  color: #6d28d9;
+  font-size: 27px;
+  overflow-wrap: anywhere;
+}
+
+.panel {
+  margin-bottom: 24px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.grade-form {
+  display: flex;
+  gap: 12px;
+}
+
+.grade-form input,
+.search-input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.grade-form input:focus,
+.search-input:focus {
+  border-color: #8b5cf6;
+}
+
+.grade-form button {
+  white-space: nowrap;
+  padding: 12px 18px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.grade-form button:hover {
+  background: #6d28d9;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.clear-button {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.search-input {
+  margin: 12px 0 20px;
+}
+
+.grade-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.grade-card {
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.grade-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.grade-card-header h3 {
+  overflow-wrap: anywhere;
+}
+
+.letter-grade {
+  display: grid;
+  place-items: center;
+  min-width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.grade-A,
+.grade-B {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.grade-C,
+.grade-D {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.grade-F {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.mark {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.mark span {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+.progress-track {
+  height: 8px;
+  background: #e9e5f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #8b5cf6;
+  border-radius: 10px;
+}
+
+.passed {
+  color: #15803d;
+}
+
+.failed {
+  color: #dc2626;
+}
+
+.delete-button {
+  width: 100%;
+  padding: 10px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  border-radius: 8px;
+}
+
+.delete-button:hover {
+  background: #fecaca;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 25px;
+  color: #64748b;
+}
+
+@media (max-width: 750px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grade-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .grade-form {
+    flex-direction: column;
+  }
+
+  .page-header h1 {
+    font-size: 29px;
+  }
+}
